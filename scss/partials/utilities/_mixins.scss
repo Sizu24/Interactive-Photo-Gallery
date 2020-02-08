@@ -1,0 +1,9 @@
+@mixin mq($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin center {
+  margin: 0 auto;
+}

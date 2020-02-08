@@ -1,0 +1,16 @@
+/* ================== Search Bar ================== */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 15px 0;
+  input {
+    width: 425px;
+    height: 40px;
+    padding-left: 20px;
+    border-radius: 5px;
+    border: 2px solid #EFEFEF;
+    @include mq($md-break){
+      width: 470px;
+    }
+  }
+}
