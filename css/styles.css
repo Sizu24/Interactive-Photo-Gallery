@@ -342,8 +342,13 @@ input::placeholder {
   font-size: 1.1em;
 }
 
+h1 {
+  font-size: 1em;
+  padding: 0;
+}
+
 /* ================== Images ================== */
-.thumbnails {
+#lightgallery {
   display: flex;
   flex-wrap: wrap;
   font-size: 10px;
@@ -352,11 +357,11 @@ input::placeholder {
   padding: 0;
 }
 @media (min-width: 896px) {
-  .thumbnails {
+  #lightgallery {
     max-width: 1000px;
   }
 }
-.thumbnails li {
+#lightgallery a {
   margin: 0 auto;
   padding: 20px 15px;
 }
@@ -378,6 +383,10 @@ header input {
   header input {
     width: 470px;
   }
+}
+
+.lg-toolbar {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /*# sourceMappingURL=styles.css.map */

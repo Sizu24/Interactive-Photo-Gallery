@@ -1,5 +1,5 @@
 /* ================== Images ================== */
-.thumbnails {
+#lightgallery {
   display: flex;
   flex-wrap: wrap;
   font-size: 10px;
@@ -9,7 +9,7 @@
   @include mq($md-break){
     max-width: 1000px;
   }
-  li {
+  a {
     @include center;
     padding: 20px 15px;
   }
