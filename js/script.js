@@ -1,11 +1,5 @@
-// Run lightbox plugin
-$("#lightgallery").lightGallery({
-  thumbnail: true
-});
-
-
 // Array of quotes for images
-const quotes = [
+const quotesList = [
   "<h1>Hay Bales</h1>\
   I love hay bales. Took this snap on a drive through the countryside past some straw fields.",
 
@@ -43,12 +37,43 @@ const quotes = [
   "<h1>Bluebells</h1>\
   I walked through this meadow of bluebells and got a good view of the snow on the mountain \
   before the fog came in."
-
 ];
 
 // Add quotes from above array to each a tag in HTML
 $('#lightgallery a').each(function(index){
-  $(this).attr('data-sub-html', quotes[index]);
+  $(this).attr('data-sub-html', quotesList[index]);
 });
 
+// jQuery plugin source: https://sachinchoolur.github.io/lightGallery/ 
+// Run jQuery Light Gallery plugin for lightbox
+$("#lightgallery").lightGallery();
+
+// Searchbar input to search images, hide images that aren't in the search
+function searchImages(){
+
+  // variables
+  let searchBarSelector = $('input');
+  let anchorTagSelector = document.getElementsByTagName("a");
+  let userInputValue = $(searchBarSelector).val();
+  let lowerCaseQuotes = [];
+
+  for(let i = 0; i < quotesList.length; i++){
+
+    /* 
+      Loop to push quotes list into new array, to create all lower case quotes.
+      Loop each quote to see if any parts match user input.
+      If so, keep display to "flex".
+      Otherwise change display for that anchortag to "none".
+    */
+
+    lowerCaseQuotes.push(quotesList[i].toLowerCase());
+
+    if(lowerCaseQuotes[i].indexOf(userInputValue.toLowerCase()) > -1){
+      anchorTagSelector[i].style.display = "flex";
+    }
+    else{
+      anchorTagSelector[i].style.display = "none";
+    }
+  }
+}
 

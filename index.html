@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>An Interactive Photo Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type="text/css" rel="stylesheet" href="css/lightGallery.min.css"> 
   <link rel="stylesheet" href="css/lg-transitions.min.css">
@@ -13,14 +13,10 @@
 <body>
 
   <header>
-
-  <input type="text" id="search" placeholder="Search(16pt)">
-  <label for="search"></label>
-
+    <input type="text" id="search" placeholder="Search(16pt)" onkeyup="searchImages()">
   </header>
 
   <main>
-
     <div id="lightgallery">
     
       <a href="photos/01.jpg">
@@ -71,7 +67,6 @@
         <img src="photos/thumbnails/12.jpg" alt="thumbnail image of landscape">
       </a>
     </div>
-
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
