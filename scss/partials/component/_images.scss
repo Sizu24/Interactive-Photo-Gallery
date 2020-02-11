@@ -7,9 +7,11 @@
   @include center;
   padding: 0;
   @include mq($md-break){
+    // keeps thumbnails in order with 4 in each row for bigger screen sizes
     max-width: 1000px;
   }
   a {
+    // centers thumbnails
     @include center;
     padding: 20px 15px;
   }
