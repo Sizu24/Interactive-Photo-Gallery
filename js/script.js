@@ -49,7 +49,7 @@ $('#lightgallery a').each(function(index){
 $("#lightgallery").lightGallery();
 
 // Searchbar input to search images, hide images that aren't in the search
-function searchImages(){
+const searchImages = () => {
 
   // variables
   let searchBarSelector = $('input');
