@@ -39,12 +39,6 @@ const quotesList = [
   before the fog came in."
 ];
 
-require(['./lightgallery.js'], function() {
-  require(["./lg-zoom.js", "./lg-thumbnail.js"], function(){
-      lightGallery(document.getElementById('lightgallery')); 
-  });
-}); 
-
 // Add quotes from above array to each a tag in HTML
 $('#lightgallery a').each(function(index){
   $(this).attr('data-sub-html', quotesList[index]);
@@ -52,6 +46,10 @@ $('#lightgallery a').each(function(index){
 
 // jQuery plugin source: https://sachinchoolur.github.io/lightGallery/ 
 // Run jQuery Light Gallery plugin for lightbox
+$(document).ready(function(){
+  $("#lightgallery").lightGallery();
+});
+
 
 // Searchbar input to search images, hide images that aren't in the search
 const searchImages = () => {
