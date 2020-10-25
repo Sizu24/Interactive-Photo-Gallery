@@ -39,6 +39,11 @@ const quotesList = [
   before the fog came in."
 ];
 
+require(['./lightgallery.js'], function() {
+  require(["./lg-zoom.js", "./lg-thumbnail.js"], function(){
+      lightGallery(document.getElementById('lightgallery')); 
+  });
+}); 
 // Add quotes from above array to each a tag in HTML
 $('#lightgallery a').each(function(index){
   $(this).attr('data-sub-html', quotesList[index]);
