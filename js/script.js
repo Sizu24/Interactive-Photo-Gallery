@@ -46,9 +46,9 @@ $('#lightgallery a').each(function(index){
 
 // jQuery plugin source: https://sachinchoolur.github.io/lightGallery/ 
 // Run jQuery Light Gallery plugin for lightbox
-$(document).ready(function(){
-  $("#lightgallery").lightGallery();
-});
+// $(document).ready(function(){
+//   $("#lightgallery").lightGallery();
+// });
 
 
 // Searchbar input to search images, hide images that aren't in the search
